@@ -1,0 +1,12 @@
+systemLog:
+    path: /data/mongos/log/mongos.log
+    logAppend: true
+    destination: file
+processManagement:
+    fork: true
+    pidFilePath: /data/mongos/data/mongos.pid
+net:
+    bindIp: 172.17.17.59
+    port: 27060
+sharding:
+    configDB: configdb/172.17.17.59:27059,172.17.17.60:27059,172.17.17.61:27059

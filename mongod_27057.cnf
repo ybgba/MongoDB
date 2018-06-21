@@ -1,0 +1,27 @@
+systemLog:
+    path: /data/ane56_27057/log/mongod_27057.log
+    logAppend: true
+    destination: file
+processManagement:
+    fork: true
+    pidFilePath: /data/ane56_27057/data/27057.pid
+net:
+    bindIp: 172.17.17.59
+    port: 27057
+    maxIncomingConnections: 65535
+storage:
+    dbPath: /data/ane56_27057/data/
+    journal:
+        enabled: true
+    directoryPerDB: true
+    syncPeriodSecs: 60
+    wiredTiger:
+        engineConfig:
+            cacheSizeGB: 150
+operationProfiling:
+    slowOpThresholdMs: 100
+replication:
+    oplogSizeMB: 10240
+    replSetName: set3
+sharding:
+    clusterRole: shardsvr

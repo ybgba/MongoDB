@@ -1,0 +1,18 @@
+systemLog:
+    path: /data/ane56_27059/log/mongod_27059.log
+    logAppend: true
+    destination: file
+processManagement:
+    fork: true
+    pidFilePath: /data/ane56_27059/data/27059.pid
+net:
+    bindIp: 172.17.17.59
+    port: 27059
+storage:
+    dbPath: /data/ane56_27059/data/
+    journal:
+        enabled: true
+replication:
+    replSetName: configdb
+sharding:
+    clusterRole: configsvr
