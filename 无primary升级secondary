@@ -1,0 +1,6 @@
+-- secondary升级成primary
+rscnf=rs.conf()
+rscnf.members=[rscnf.members[2]]
+rscnf.members.priority=10
+rs.reconfig(rscnf,{force: true})
+rs.status()
